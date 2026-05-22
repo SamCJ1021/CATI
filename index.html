@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CATI — 发现你的内在猫咪人格</title>
+  <meta name="description" content="CATI 猫咪性格测试，回答10道题，发现你属于哪种猫。灵感来自MBTI。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 背景文字墙 -->
+  <div class="bg-wall" id="bg-wall">
+    <div class="bg-wall__inner" id="bg-inner"></div>
+  </div>
+
+  <!-- 结果页专属：顶部 Suroo / 底部 萨牧Sam -->
+  <div class="bg-result-top" id="bg-result-top">Suroo</div>
+  <div class="bg-result-bottom" id="bg-result-bottom">萨牧Sam</div>
+
+  <!-- 左上角导航 -->
+  <nav class="top-nav" id="top-nav">
+    <button class="top-nav__btn" id="nav-home" title="回到首页">🏠</button>
+    <button class="top-nav__btn" id="nav-back" title="返回上一级">←</button>
+  </nav>
+
+  <!-- ====== 首页 ====== -->
+  <section id="screen-home" class="screen active">
+    <div class="container">
+      <div class="home__brand">
+        <h1 class="home__title">CATI</h1>
+        <p class="home__subtitle">Cat Attitude Type Indicator</p>
+        <p class="home__desc">回答 10 道题，发现你的内在猫咪人格</p>
+      </div>
+      <div class="home__dots" id="home-dots"></div>
+      <button class="btn btn--primary btn--large" id="btn-start">开始测试</button>
+      <p class="home__hint">大约需要 2 分钟 / 共 10 题</p>
+    </div>
+  </section>
+
+  <!-- ====== 答题页 ====== -->
+  <section id="screen-quiz" class="screen">
+    <div class="container container--narrow">
+      <div class="quiz__progress">
+        <div class="quiz__progress-bar">
+          <div class="quiz__progress-fill" id="progress-fill"></div>
+        </div>
+        <span class="quiz__progress-text" id="progress-text">1 / 10</span>
+      </div>
+      <div class="quiz__card">
+        <h2 class="quiz__question" id="question-text"></h2>
+        <div class="quiz__options" id="options-container"></div>
+      </div>
+      <div class="quiz__nav">
+        <button class="btn btn--ghost" id="btn-prev" disabled>← 上一题</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 结果页 ====== -->
+  <section id="screen-result" class="screen">
+    <div class="container container--narrow">
+      <h2 class="result__heading">你的 CATI 类型</h2>
+      <div class="result__block" id="result-block"></div>
+      <div class="result__info">
+        <span class="result__code" id="result-code"></span>
+        <span class="result__name" id="result-name"></span>
+      </div>
+      <p class="result__title" id="result-title"></p>
+      <p class="result__desc" id="result-desc"></p>
+      <div class="result__tags" id="result-tags"></div>
+      <div class="result__match" id="result-match"></div>
+      <button class="btn btn--primary btn--large" id="btn-restart">重新测试</button>
+    </div>
+  </section>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
