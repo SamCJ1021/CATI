@@ -524,6 +524,46 @@ button {
   line-height: 1.5;
 }
 
+/* ---------- 底部 ---------- */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  pointer-events: none;
+}
+
+.footer__douyin {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(180,120,60,0.15);
+  border-radius: 50px;
+  color: #1A1A1A;
+  font-size: 0.85rem;
+  text-decoration: none;
+  pointer-events: auto;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: var(--font);
+  font-weight: 500;
+}
+
+.footer__douyin:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.footer__douyin-icon {
+  color: #1A1A1A;
+}
+
 /* ---------- 响应式 ---------- */
 @media (min-width: 768px) {
   .home__title { font-size: 4.5rem; }
